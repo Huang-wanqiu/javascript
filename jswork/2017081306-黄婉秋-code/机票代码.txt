@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>联盟机票</title>
+		<style>
+			.div1 {
+				margin-left: 130px;
+				margin-right: 130px;
+				width: 1150px;
+				position: absolute;
+			}
+			
+			.div2 {
+				background-color: white;
+				margin-left: 130px;
+				margin-top: 0px;
+				width: 1150px;
+				position: absolute;
+			}
+			
+			.div3 {
+				background-color: white;
+				margin-top: 50px;
+				margin-left: 130px;
+				width: 1150px;
+			}
+			
+			.div4 {
+				color: aquamarine;
+			}
+			
+			.div5{
+				background-color: white;
+				margin-top: 0px;
+				margin-left: 130px;
+				width: 1150px;
+			}
+			
+			.cross {
+				width: 1150px;
+				height: 15px;
+				border-top: 3px solid gainsboro;
+			}
+			
+			.cross1 {
+				width: 810px;
+				height: 5px;
+				border-top: 1px solid gainsboro;
+			}
+			
+			.border0 {
+				width: 1150px;
+				height: 25px;
+				background-color: darkgray;
+				padding-left: 130px;
+				padding-right: 112px;
+				position: absolute;
+			}
+			
+			.border2-1 {
+				float: right;
+				width: 315px;
+				height: 205px;
+				background-color: #DCDCDC;
+				border: solid #C0C0C0;
+				margin-left: 950px;
+				margin-top: 50px;
+				position: absolute;
+			}
+			
+			.border2-1-1 {
+				width: 315px;
+				height: 185px;
+				background-color: #FFFFFF;
+				padding-top: 0px;
+				text-align: left;
+				border: hidden;
+			}
+			
+			body {
+				background: url(img/7.jpg) no-repeat;
+				background-size: 1400px;
+			}
+		</style>
+		<script>
+			function tianjia() {
+				var a = document.getElementById("jia");
+			}
+
+			function denglu() {
+				alert("还没开发出来!!等等!!");
+			}
+
+			function tianjia1() {
+				var br = document.getElementById("br");
+				var div = document.getElementById("passenger");
+
+				//	var div0 = document.createElement("div");
+				var div1 = document.createElement("div");
+				div1.setAttribute('style', 'float:right; margin:5px');
+				var input1 = document.createElement("input");
+				input1.setAttribute('type', 'checkbox');
+				var img = document.createElement("img");
+				/*img.src = "img/x.jpg";`*/
+				div1.appendChild(input1);
+				div1.innerHTML = "保存常用姓名&nbsp;";
+				div1.appendChild(img);
+
+				var div2 = document.createElement("div");
+				div2.innerHTML = "第" + pNum + "位乘机人：" + name;
+				div2.setAttribute('style', 'background-color:#EEEEEE; padding:5px;');
+
+				var table = document.createElement("table");
+				table.setAttribute('height', '130px');
+
+				var tr1 = document.createElement("tr");
+				var td1_1 = document.createElement("td");
+				td1_1.innerHTML = "<font color='#FF0000'>*</font>";
+				var td1_2 = document.createElement("td");
+				td1_2.innerHTML = "购票类型:";
+				var td1_3 = document.createElement("td");
+				var select1 = document.createElement("select");
+				var option1_1 = document.createElement("option");
+				option1_1.innerHTML = "成人票";
+				var option1_2 = document.createElement("option");
+				option1_2.innerHTML = "儿童票";
+				var option1_3 = document.createElement("option");
+				option1_3.innerHTML = "残军票";
+				select1.appendChild(option1_1);
+				select1.appendChild(option1_2);
+				select1.appendChild(option1_3);
+				td1_3.appendChild(select1);
+				var td1_4 = document.createElement("td");
+				td1_4.innerHTML = "￥2200/成人(含税费)";
+				var td1_5 = document.createElement("td");
+				td1_5.innerHTML = "<font color='#0000FF'>退改签</font>";
+				tr1.appendChild(td1_1);
+				tr1.appendChild(td1_2);
+				tr1.appendChild(td1_3);
+				tr1.appendChild(td1_4);
+				tr1.appendChild(td1_5);
+
+				var tr2 = document.createElement("tr");
+				var td2_1 = document.createElement("td");
+				td2_1.innerHTML = "<font color='#FF0000'>*</font>";
+				var td2_2 = document.createElement("td");
+				td2_2.innerHTML = "姓    名：";
+				var td2_3 = document.createElement("td");
+				var input2 = document.createElement("input");
+				input2.setAttribute('type', 'text');
+				input2.setAttribute('value', name);
+				td2_3.appendChild(input2);
+				var td2_4 = document.createElement("td");
+				td2_4.innerHTML = "<font color='#0000FF'>填写说明</font>";
+				tr2.appendChild(td2_1);
+				tr2.appendChild(td2_2);
+				tr2.appendChild(td2_3);
+				tr2.appendChild(td2_4);
+
+				var tr3 = document.createElement("tr");
+				var td3_1 = document.createElement("td");
+				td3_1.innerHTML = "<font color='#FF0000'>*</font>";
+				var td3_2 = document.createElement("td");
+				td3_2.innerHTML = "证件类型:";
+				var td3_3 = document.createElement("td");
+				var select2 = document.createElement("select");
+				select2.setAttribute('id', 'ID' + passNum);
+				var option3_1 = document.createElement("option");
+				option3_1.innerHTML = "护照";
+				var option3_2 = document.createElement("option");
+				option3_2.innerHTML = "中国居民身份证";
+				var option3_3 = document.createElement("option");
+				option3_3.innerHTML = "港澳居民来往内地通行证";
+				var option3_4 = document.createElement("option");
+				option3_4.innerHTML = "台湾居民来往大陆通行证";
+				option3_1.setAttribute('value', '1');
+				option3_1.setAttribute('value', '1');
+				option3_2.setAttribute('value', '2');
+				option3_3.setAttribute('value', '3');
+				option3_4.setAttribute('value', '4');
+				select2.appendChild(option3_1);
+				select2.appendChild(option3_2);
+				select2.appendChild(option3_3);
+				select2.appendChild(option3_4);
+				td3_3.appendChild(select2);
+				tr3.appendChild(td3_1);
+				tr3.appendChild(td3_2);
+				tr3.appendChild(td3_3);
+
+				var tr4 = document.createElement("tr");
+				var td4_1 = document.createElement("td");
+				td4_1.innerHTML = "<font color='#FF0000'>*</font>";
+				var td4_2 = document.createElement("td");
+				td4_2.innerHTML = "证件号码:";
+				var td4_3 = document.createElement("td");
+				var input3 = document.createElement("input");
+				input3.setAttribute('type', 'text');
+				input3.setAttribute('id', 'cardNo' + passNum);
+				input3.setAttribute('value', '220603019764221539');
+				td4_3.appendChild(input3);
+				tr4.appendChild(td4_1);
+				tr4.appendChild(td4_2);
+				tr4.appendChild(td4_3);
+
+				table.appendChild(tr1);
+				table.appendChild(tr2);
+				table.appendChild(tr3);
+				table.appendChild(tr4);				
+					
+				div.appendChild(div1);
+				div.appendChild(div2);
+				div.appendChild(table);
+
+			}
+			
+			function xia(){
+				var ll = document.getElementById("lxr").value;
+				var lll = /^\D{1,10}$/g;
+				if(lll.test(ll) != true){
+					alert("联系人输入格式错误！！重新输入！！")
+				}
+				else{}
+				
+				var numm = document.getElementById("num").value;
+				var n = /^\d{11}$/g;
+				if(n.test(numm) != true){
+					alert("联系电话输入格式错误！！重新输入！！")
+				}
+				else{}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="border0">
+			<div style="float: right;">
+				<input type="button" value="登录" style="background-color: orange; color: white;" width="30px" height="80px" onclick="denglu()" /> | 免费注册 | 手机端下载 | 设为首页 | 加入收藏夹</div>
+			今天是2018年12月12日?晴22°C~16°C
+		</div><br />
+		<div class="div1">
+			<font size="7" face="行楷"><b>联盟<font color="red">.</font>机票</b></font>
+		</div><br /><br /><br />
+		<div class="div2">
+			<font size="5" face="行楷">机票预订</font>
+			<div class="cross"></div>
+		</div>
+		<div class="border2-1">
+			?贴心提示
+			<div class="border2-1-1">
+				<li>航班查询</li>
+				<li>机票价格</li>
+				<li>支付方式</li>
+				<li>配送方式</li>
+				<li>行程单/报销凭证/发票</li>
+				<li>订单修改与取消</li>
+				<li>乘机常识</li>
+			</div>
+		</div>
+		<div class="div3">
+			<table border="0px">
+				<tr>
+					<td colspan="7" align="right">
+						<font color="gold">选择 ---- 预定 ---- </font>核对 ---- 支付 ---- 完成</font>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7" align="left" bgcolor="aquamarine">
+						<font size="3" face="行楷"> | 航班信息</font>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2"><img src="img/dh1.png" width="100px" height="80px" /></td>
+					<td>东方航空 MU5768</td>
+					<td>
+						<font color="blue">[修改航班]</font>
+					</td>
+					<td>
+						<font color="blue">[退 改 签]</font>
+					</td>
+					<td>2019年01月18日 15:10</td>
+					<td>周水子国际机场 -- 起飞</td>
+					<td rowspan="2">￥1500/成人<br /> （含税费）
+					</td>
+
+				</tr>
+				<tr>
+					<td>中型机73H
+						<font color="blue">经停</font>
+					</td>
+					<td>
+						<font color="blue">[修改舱位]</font>
+					</td>
+					<td>&nbsp;</td>
+					<td>2019年01月18日 20:50</td>
+					<td>昆明长水国际机场 -- 降落</td>
+				</tr>
+			</table>
+			<div class="cross1"></div>
+			<table border="0px">
+				<tr>
+					<td colspan="7">总价：￥1500（含税费） 人数：1人
+						<font color="blue"> 机票明细</font>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7" align="left" bgcolor="aquamarine" width="810px" height="25px">
+						<font size="3" face="行楷"> | 乘客信息</font>
+						<font color="red" size="2">
+							请准确填写乘客信息（姓名、证件号码）,以免在办理登机手续时发生问题。</font>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						在常用的姓名中搜索:<input type="text" />
+					</td>
+					<td>
+						<input type="checkbox">刘某某
+						<input type="checkbox">王某某
+						<input type="checkbox">张某某
+						<input type="checkbox">李某某
+					</td>
+				</tr>
+			</table>
+			<div>
+				<table>
+					<tr>
+						第一位乘机人:<b>刘某某</b>
+					</tr>
+					<tr>
+						<td>
+							<font color="#FF0000" >*</font>购票类型:
+							<select style="width: 153px;">
+								<option>成人票</option>
+								<option>儿童票</option>
+							</select>
+						</td>
+						<td>￥1500/成人(含税费) <font color="blue">退改签</font></td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td>
+							<font color="#FF0000" >*</font>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:
+							<input type="text" value="刘某某"/>
+						</td>
+						<td><font color="blue">填写说明</<font></td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td>
+							<font color="#FF0000" >*</font>证件类型:
+							<select style="width: 153px;">
+								<option>护照</option>
+								<option>学生证</option>
+								<option>身份证</option>
+								<option>军人证</option>
+								<option>港澳通行证</option>
+								<option>台湾通行证</option>
+							</select>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td>
+							<font color="#FF0000">*</font>证件号码:
+							<input type="text" value="1234567891"/>
+						</td>
+					</tr>
+				</table>
+			</div>	
+			<input type="button" onclick="tianjia1()" value="添加乘客">
+		</div>
+		<div class="div5">
+			<table>
+				<tr>
+					<td colspan="2" align="left" bgcolor="aquamarine" width="810px" height="25px">
+						<font size="3" face="行楷"> | 联系人信息</font>
+				</tr>
+				<tr>
+					<td align="right">
+						<font color="#FF0000">*</font>联系人:
+					</td>
+					<td align="left"><input type="text" id="lxr" style="width: 210px;" /></td>
+				</tr>
+				<tr>
+					<td align="right">
+						<font color="#FF0000">*</font>手机号码:
+					</td>
+					<td align="left"><input type="text" id="num" style="width: 210px;" /></td>
+				</tr>
+				<tr>
+					<td align="right">
+						联系电话:
+					</td>
+					<td align="left">
+						<input type="text" style="width: 45px;" id="qh" value="区号" />
+						<input type="text" id="dhhm" value="电话号码" style="width: 100px;" />
+						<input type="text" style="width: 45px;" id="fj" value="分机" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">传真号码:</td>
+					<td align="left">
+						<input type="text" id="qh" style="width: 45px;" value="区号" />
+						<input type="text" id="dhhm" style="width: 100px;" value="电话号码" />
+						<input type="text" id="fj" style="width: 45px;" value="分机" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">E-mail:</td>
+					<td align="left"><input type="text" id="email" style="width: 210px;" /></td>
+				</tr>
+				<tr>
+					<td align="right">联系地址:</td>
+					<td align="left"><input type="text" id="dizhi" style="width: 210px;" /></td>
+				</tr>
+			</table>
+			<div class="cross1"></div>
+			<table>
+				<tr align="center">
+					<td colspan="2">
+						<input type="button" value="上一步" />
+						<input type="button" value="下一步" style="background-color: orange;" onclick="xia()"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div2" style="width: 1150px;">
+			<table style="border: solid silver;" width="1150px" height="100px">
+				<tr>
+					<td>&nbsp;</td>
+					<td style="border-bottom: solid 1px black;">
+						<font size="4" face="微软雅黑">新手指南</font>
+					</td>
+					<td>&nbsp;</td>
+					<td style="border-bottom: solid 1px black;">
+						<font size="4" face="微软雅黑">支付方式</font>
+					</td>
+					<td>&nbsp;</td>
+					<td style="border-bottom: solid 1px black;">
+						<font size="4" face="微软雅黑">品质服务</font>
+					</td>
+					<td>&nbsp;</td>
+					<td style="border-bottom: solid 1px black;">
+						<font size="4" face="微软雅黑">帮助信息</font>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<font size="2" color="gray" face="微软雅黑">预订步骤<br>订单查询</font>
+					</td>
+					<td></td>
+					<td>
+						<font size="2" color="gray" face="微软雅黑">在线支付<br>开通财付通</font>
+					</td>
+					<td></td>
+					<td>
+						<font size="2" color="gray" face="微软雅黑">退改签说明<br>行程单配送方式<br>航空意外险</font>
+					</td>
+					<td></td>
+					<td>
+						<font size="2" color="gray" face="微软雅黑">免费邮寄行程单/保险发票</font>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="8" height="30px"></td>
+				</tr>
+			</table>
+			<p></p>
+			<p></p>
+			<center>
+				<font size="3" color="darkgray" face="微软雅黑">关于我们 | 联系我们 | 用户协议 | 帮助信息<br>Copyright2012 商家联盟 版权所有 辽ICP备09013204号-2</font>
+			</center>
+		</div>
+	</body>
+
+</html>    	
